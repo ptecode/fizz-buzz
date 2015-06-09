@@ -1,3 +1,4 @@
+
 function fizzBuzz (num) {
     var message = "";
     for(var i = 1; i <= num; i += 1) {
@@ -19,18 +20,10 @@ function fizzBuzz (num) {
     return message;
 }
 
-function print (result) {
-
-    $(".content").append(result).css({
-    "text-align": "center",
-    "font-weight": "bold"
-    });
-}
-
 
 var usernum = parseInt(prompt("Enter a number"));
 
-//console.log(usernum);
+console.log("user input is : " + usernum);
 
 //checking for valid user input
 if (isNaN(usernum) || usernum === 0) {
@@ -39,8 +32,12 @@ if (isNaN(usernum) || usernum === 0) {
     document.location.reload(true);
 }
 
-var result = fizzBuzz(usernum);
+//adding fizzbuzz to content
+$(".content").append( fizzBuzz(usernum) ).css({
+    "text-align": "center",
+    "font-weight": "bold"
+    });
 
-print(result);
+
 
 
