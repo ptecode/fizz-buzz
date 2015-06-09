@@ -30,7 +30,7 @@ function print (result) {
 
 var usernum = parseInt(prompt("Enter a number"));
 
-console.log(usernum);
+//console.log(usernum);
 
 //checking for valid user input
 if (isNaN(usernum) || usernum === 0) {
